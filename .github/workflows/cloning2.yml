@@ -1,0 +1,18 @@
+name: cloning repositories
+on: [push,pull_request]
+jobs: 
+  my-job:
+   runs-on: windows-latest
+   steps:
+    - name: cloning hello-world repository
+      uses: actions/checkout@v2.4.0
+    - name: cloning second repository
+      uses: actions/checkout@v2
+      with:
+         repository: vamsibharg/second-repo
+         path: second-repo
+    - name: looking for java
+      run: dir
+    - name: run the files    
+      run: ${{ github.workspace }}\hello.java
+    - run: ${{ github.workspace }}\hello.py
