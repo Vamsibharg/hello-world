@@ -6,13 +6,12 @@ jobs:
    steps:
     - name: cloning hello-world repository
       uses: actions/checkout@v2.4.0
-      with:
-        path: main
+      
     - name: cloning second repository
       uses: actions/checkout@v2
       with:
          repository: vamsibharg/second-repo
-         path: second-repo/main
+         path: hello.java
     - name: looking for java
       run: dir     
     - name: run the files    
