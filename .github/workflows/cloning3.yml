@@ -14,5 +14,5 @@ jobs:
     - name: looking for java
       run: dir
     - name: run the files    
-      run: ${{ github.workspace }}\hello.java
-    - run: ${{ github.workspace }}\hello.py
+      run: ${{ github.workspace }}\java hello.java
+    - run: ${{ github.workspace }}\java hello.py
