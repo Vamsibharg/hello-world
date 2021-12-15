@@ -10,7 +10,12 @@ jobs:
       uses: actions/checkout@v2
       with:
          repository: vamsibharg/second-repo
-         path: second-repo/hello.java
+         path: second-repo
+    - name: looking for hello.java
+      run: dir
     - name: run the files    
-      run: ${{ github.workspace }}\hello.java,${{ github.workspace }}\hello.py
+    - run: 
+         ${{ github.workspace }}\hello.java
+    - run:  
+          ${{ github.workspace }}\hello.py
  
