@@ -6,14 +6,17 @@ jobs:
    steps:
     - name: cloning hello-world repository
       uses: actions/checkout@v2.4.0
+      with:
+        path: main
     - name: cloning second repository
       uses: actions/checkout@v2
       with:
-         repository: vamsibharg/hello-world
-         path: hello-world
+         repository: vamsibharg/second-repo
+         path: second-repo/main
     - name: looking for java
       run: dir     
     - name: run the files    
-      run: ${{ github.workspace }}\hello.java,
+      run: ${{ github.workspace }}\hello.py
+    - run: ${{ github.workspace }}\hello.java
     - run: ${{ github.workspace }}\hello.py
  
