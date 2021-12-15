@@ -7,7 +7,7 @@ jobs:
     - name: cloning hello-world repository
       uses: actions/checkout@v2.4.0
     - name: cloning second repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.4.0
       with:
          repository: vamsibharg/second-repo
          path: second-repo
