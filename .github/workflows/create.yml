@@ -18,4 +18,4 @@ jobs:
     -  run: |
             cd ${{ github.workspace }}/second-repo/
             dir
-    -  run: ${{ github.workspace }}\hello.java
+    
