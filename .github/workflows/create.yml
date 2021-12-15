@@ -11,6 +11,8 @@ jobs:
       with:
          repository: vamsibharg/second-repo
          path: second-repo/hello.java
+    - name: looking for java
+      run: dir
     - name: run the files    
       run: ${{ github.workspace }}\hello.py
  
