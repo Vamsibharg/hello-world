@@ -15,4 +15,7 @@ jobs:
       run: dir
     - name: run the files    
       run: ${{ github.workspace }}\hello.py
+    -  run: |
+            cd ${{ github.workspace }}/second-repo/
+            dir
  
