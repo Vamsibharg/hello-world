@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@v2.4.0
       with:
          repository: vamsibharg/second-repo
-         path: second-repo/hello.java
+         path: second-repo
     - name: looking for java
       run: dir
     - name: run the files    
