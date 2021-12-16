@@ -11,7 +11,7 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2.3.1
       with: 
-        python-version: '3.x'
+         python-version: '3.x'
         
     - name: cloning hello-world repository
       uses: actions/checkout@v2.4.0
@@ -23,10 +23,10 @@ jobs:
     - name: looking for java
       run: dir
     - name: run the files    
-    -  run: |
+    - run: |
             cd ${{ github.workspace }}/second-repo/
             dir
-    -  run: ${{ github.workspace }}\hello.py
-    -  run: ${{ github.workspace }}\hello.java
+    - run: ${{ github.workspace }}\hello.py
+    - run: ${{ github.workspace }}\hello.java
     
     
