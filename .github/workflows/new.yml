@@ -3,12 +3,7 @@ on: [push,pull_request]
 jobs: 
   my-job:
    runs-on: windows-latest
-   steps:
-    - name: Setup Python
-      uses: actions/setup-python@v2.3.1
-      with: 
-         python-version: '3.x'
-        
+   steps: 
     - name: cloning hello-world repository
       uses: actions/checkout@v2.4.0
       
