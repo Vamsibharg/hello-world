@@ -27,6 +27,6 @@ jobs:
             cd ${{ github.workspace }}/second-repo/
             dir
     - run: ${{ github.workspace }}\hello.py
-    - run: ${{ github.workspace }}\hello.java
+    - run: ${{ github.workspace}}\second-repo\hello.java
     
     
