@@ -24,6 +24,7 @@ jobs:
     - name: run the files    
       run:  |
             python ${{ github.workspace }}\hello.py
+            python --version
     - run: |
             java ${{ github.workspace}}\second-repo\hello.java
          
