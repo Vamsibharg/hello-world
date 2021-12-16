@@ -32,8 +32,8 @@ jobs:
             dir
     - name: run the files
     - run: |
-           ${{ github.workspace }}\hello.py
+       python ${{ github.workspace }}\hello.py
     - run: |
-           ${{ github.workspace}}\second-repo\hello.java
+       java ${{ github.workspace}}\second-repo\hello.java
     
     
