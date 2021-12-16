@@ -9,11 +9,6 @@ jobs:
       
     - name: looking for files in hello-world
       run: dir
-      
-    - uses: actions/setup-java@v2
-      with:
-         distribution: 'zulu' # See 'Supported distributions' for available options
-         java-version: '11'
          
     - name: cloning second repository
       uses: actions/checkout@v2.4.0
