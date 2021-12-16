@@ -4,10 +4,6 @@ jobs:
   my-job:
    runs-on: windows-latest
    steps:
-    - uses: actions/setup-java@v2
-      with:
-         distribution: 'zulu' # See 'Supported distributions' for available options
-         java-version: '11'
     - name: Setup Python
       uses: actions/setup-python@v2.3.1
       with: 
@@ -15,17 +11,26 @@ jobs:
         
     - name: cloning hello-world repository
       uses: actions/checkout@v2.4.0
+      
+    - name: looking for files in hello-world
+      run: dir
+      
+    - uses: actions/setup-java@v2
+      with:
+         distribution: 'zulu' # See 'Supported distributions' for available options
+         java-version: '11'
+         
     - name: cloning second repository
       uses: actions/checkout@v2.4.0
       with:
          repository: vamsibharg/second-repo
          path: second-repo
-    - name: looking for java
-      run: dir
-    - name: run the files    
+   
+    - name: looking for files in second-repo  
     - run: |
             cd ${{ github.workspace }}/second-repo/
             dir
+    - name: run the files
     - run: |
            ${{ github.workspace }}\hello.py
     - run: |
