@@ -1,12 +1,6 @@
 name: Manually triggerd workflow
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'getting ID'
-        required: true
-        default: gihub run_id
-      
 jobs:
   run_id:
     runs-on: windows-latest
