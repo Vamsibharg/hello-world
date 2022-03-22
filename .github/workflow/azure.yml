@@ -1,11 +1,11 @@
 name: GitHub for dploy VM to azure
 
+on: [push]
+
 env:
   OUTPUT_PATH: $({{ github.workspace }})
 
-  on: [push]
-
-  jobs:
+   jobs:
     # Deploy VM to zure
     DeployVM:
       runs-on: windows-latest
@@ -22,7 +22,7 @@ env:
        -name: provision virtual machine in azure
         env: 
           RESOURSE_GROUP: rg-githubvm
-          RESOURSE_GROUP_REGION: EastCentral US
+          RESOURSE_GROUP_REGION: East US
           SERVER_NAME: githubactions
           ADMINN_LOGIN: bhargavi
 
