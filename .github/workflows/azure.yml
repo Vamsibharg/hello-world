@@ -1,11 +1,20 @@
 name: GitHub for dploy VM to azure
 
+<<<<<<< HEAD
 on: [push]
 
 env:
   OUTPUT_PATH: $({{ github.workspace }})
 
    jobs:
+=======
+env:
+  OUTPUT_PATH: $({{ github.workspace }})
+
+  on: [push]
+
+  jobs:
+>>>>>>> c35931254dd70537afb9eb1c0b41fdbd94617b52
     # Deploy VM to zure
     DeployVM:
       runs-on: windows-latest
@@ -13,16 +22,27 @@ env:
       steps:
       #checkout code from repo
       -name: checkout repo
+<<<<<<< HEAD
        uses: actions/checkout@v3.0.0
+=======
+       uses: actions/checkout@v2
+>>>>>>> c35931254dd70537afb9eb1c0b41fdbd94617b52
 
        -name: look for Ps1 file
         run: |
           ls '${{ env.OUTPUT_PATH}}\AzureCLI'
+<<<<<<< HEAD
 
        -name: provision virtual machine in azure
         env: 
           RESOURSE_GROUP: rg-githubvm
           RESOURSE_GROUP_REGION: East US
+=======
+       -name: provision virtual machine in azure
+        env: 
+          RESOURSE_GROUP: rg-githubvm
+          RESOURSE_GROUP_REGION: EastCentral US
+>>>>>>> c35931254dd70537afb9eb1c0b41fdbd94617b52
           SERVER_NAME: githubactions
           ADMINN_LOGIN: bhargavi
 
@@ -36,4 +56,8 @@ env:
             -resourseGroupNameRegion %RESOURSE_GROUP_REGION%
             -serverName %SERVER_NAME%
             -adminLogin %ADMIN_LOGIN%
+<<<<<<< HEAD
             -adminPassword ${{ secrets.ADMIN_PASSWORD }}
+=======
+            -adminPassword ${{ secrets.ADMIN_PASSWORD }}
+>>>>>>> c35931254dd70537afb9eb1c0b41fdbd94617b52
