@@ -13,7 +13,7 @@ env:
       steps:
       #checkout code from repo
       -name: checkout repo
-       uses: actions/checkout@v1
+       uses: actions/checkout@v2
 
        -name: look for Ps1 file
         run: |
