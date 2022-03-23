@@ -18,7 +18,8 @@ jobs:
       - name: look for Ps1 file
         run: |
           ls '${{ env.OUTPUT_PATH }}\AzureCLI'
- - name: provision virtual machine in azure
+
+  - name: provision virtual machine in azure
 
       env:
 
@@ -32,7 +33,7 @@ jobs:
 
       run: >
 
-        powershell -command "& '${{ env.OUTPUT_PATH }}\IaC\AzCLI\vmcreation.ps1'"
+        powershell -command "& '${{ env.OUTPUT_PATH }}\AzureCLI\VMCreation.Ps1'"
 
         -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_ID }}
 
