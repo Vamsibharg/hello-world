@@ -25,7 +25,7 @@ jobs:
           SERVER_NAME: githubactions
           ADMINN_LOGIN: bhargavi
 
-          run: >"
+          run: >
             powershell -command "& '${{ env.OUTPUT_PATH }}\AzureCLI\VM Creation.Ps1' "
             -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_ID }}
             -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }}
