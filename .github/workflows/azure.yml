@@ -21,7 +21,7 @@ jobs:
       - name: provision virtual machine in azure
         env: 
           RESOURSE_GROUP: rg-githubvm
-          RESOURSE_GROUP_REGION: East US
+          RESOURSE_GROUP_REGION: EastCentral US
           SERVER_NAME: githubactions
           ADMINN_LOGIN: bhargavi
 
