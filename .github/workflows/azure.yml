@@ -17,7 +17,7 @@ jobs:
       
       - name: look for Ps1 file
         run: |
-          ls '${{ env.OUTPUT_PATH }}\.github\AzureCLI'
+          ls '${{ env.OUTPUT_PATH }}/.github/AzureCLI'
       - name: provision virtual machine in azure
         env:
           RESOURCE_GROUP: rg-github
