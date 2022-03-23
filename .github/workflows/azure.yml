@@ -34,7 +34,7 @@ jobs:
 
         powershell -command "& '${{ env.OUTPUT_PATH }}\IaC\AzCLI\vmcreation.ps1'"
 
-        -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_APPID }}
+        -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_ID }}
 
         -servicePrincipalSecret ${{ secrets.SERVICE_PRINCIPAL_SECRET }}
 
