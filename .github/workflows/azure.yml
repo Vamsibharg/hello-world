@@ -1,4 +1,4 @@
-name: GitHub for dploy VM to azure
+name: GitHub for deploy VM to azure
 
 env:
   OUTPUT_PATH: $({{ github.workspace }})
@@ -6,7 +6,7 @@ env:
 on: [push]
 
 jobs:
-    # Deploy VM to zure
+    # Deploy VM to Azure
     DeployVM:
       runs-on: windows-latest
 
@@ -17,7 +17,7 @@ jobs:
       
       - name: look for Ps1 file
         run: |
-          ls '${{ env.OUTPUT_PATH }}/.github/AzureCLI'
+           ${{ env.OUTPUT_PATH }}/AZURE/AzCLI
       - name: provision virtual machine in azure
         env:
           RESOURCE_GROUP: rg-github
@@ -28,9 +28,9 @@ jobs:
 
           ADMIN_LOGIN: bhargavi
 
-         run: >
+        run: >
 
-           powershell -command "& '${{ env.OUTPUT_PATH }}\AzureCLI\VM Creation.Ps1'"
+           powershell -command "& '${{ env.OUTPUT_PATH }}\AZURE\AzCLI\VM Creation.Ps1'"
 
            -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_ID }}
 
