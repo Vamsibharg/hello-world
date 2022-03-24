@@ -17,7 +17,7 @@ jobs:
       
       - name: look for Ps1 file
         run: |
-         ls '${{ env.OUTPUT_PATH }}/AZURE/AzCLI'
+         ls '${{ env.OUTPUT_PATH }}AzureCLI'
       - name: provision virtual machine in azure
         env:
           RESOURCE_GROUP: rg-github
@@ -30,7 +30,7 @@ jobs:
 
         run: >
 
-           powershell -command "& '${{ env.OUTPUT_PATH }}\AZURE\AzCLI\VM Creation.Ps1'"
+           powershell -command "& '${{ env.OUTPUT_PATH }}\AzureCLI\VM Creation.Ps1'"
 
            -servicePrincipal ${{ secrets.SERVICE_PRINCIPAL_ID }}
 
